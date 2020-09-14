@@ -23,6 +23,7 @@ public class Question_3_Go_FishTest {
     public void testCreateDeck()  {
         
         List<String> deck = createDeck();
+        assertNotNull("Create a new list to represent the deck, and return it from the createDeck method.",  deck);
         assertEquals("The deck should contain 52 cards", 52, deck.size());
         
         int expectedSize = 52;
@@ -46,7 +47,7 @@ public class Question_3_Go_FishTest {
     
     
     @Test(timeout=TIMEOUT)
-    public void testCreatePool() throws Exception {
+    public void testCreatePool() {
         
         List<String> originalExampleDeck = newArrayList("Q", "J", "4");
         List<String> exampleDeck = newArrayList("Q", "J", "4");
@@ -58,7 +59,7 @@ public class Question_3_Go_FishTest {
     
     
     @Test(timeout=TIMEOUT)
-    public void testDealHand() throws Exception {
+    public void testDealHand() {
         
         ArrayList<String> exampleDeck = newArrayList("Q", "J", "4", "5", "3", "2", "4", "Q", "A");
         
@@ -79,7 +80,7 @@ public class Question_3_Go_FishTest {
     
     
     @Test(timeout=TIMEOUT)
-    public void testSelectComputerCardValue() throws Exception {
+    public void testSelectComputerCardValue() {
     
         // This is not a very satisfactory test, since the details of how
         // the computer chooses are not yet implemented.
@@ -98,7 +99,7 @@ public class Question_3_Go_FishTest {
     
     
     @Test(timeout=TIMEOUT)
-    public void testSelectComputerCardValueNullForEmptyHand() throws Exception {
+    public void testSelectComputerCardValueNullForEmptyHand() {
         // If the hand is empty, return null
         computerHand = new ArrayList<>();
         assertNull("If the computer's hand is empty, return null", selectComputerCardValue());
@@ -106,7 +107,7 @@ public class Question_3_Go_FishTest {
     
     
     @Test(timeout=TIMEOUT)
-    public void testGoFish() throws Exception {
+    public void testGoFish()  {
         
         pool = newArrayList("Q", "J", "3");
         ArrayList<String> poolAfterFish = newArrayList("J", "3");
@@ -134,7 +135,7 @@ public class Question_3_Go_FishTest {
     
     
     @Test(timeout=TIMEOUT)
-    public void testHandHasCard() throws Exception {
+    public void testHandHasCard()  {
         
         ArrayList<String> exampleHand = newArrayList("4", "2", "5");
         String msg = "Return true if a hand contains a card, false otherwise. Example: if the hand is [\"4\", \"2\", \"5\"] return true for \"4\" or \"5\". Return false for \"6\" or \"Q\"";
@@ -154,7 +155,7 @@ public class Question_3_Go_FishTest {
    
     
     @Test(timeout=TIMEOUT)
-    public void testTransfer() throws Exception {
+    public void testTransfer()  {
         
         //Transfer "4"
         
@@ -191,7 +192,7 @@ public class Question_3_Go_FishTest {
     
     
     @Test(timeout=TIMEOUT)
-    public void testMakeBooks() throws Exception {
+    public void testMakeBooks()  {
     
         ArrayList<String> hand = newArrayList("2", "4", "2", "2", "5", "2");
         ArrayList<String> books = new ArrayList<>();
@@ -239,7 +240,7 @@ public class Question_3_Go_FishTest {
     
     
     @Test(timeout=TIMEOUT)
-    public void testGameOver() throws Exception {
+    public void testGameOver()  {
         // pool empty?
         
         pool = new ArrayList<>();
@@ -248,7 +249,7 @@ public class Question_3_Go_FishTest {
     
     
     @Test(timeout=TIMEOUT)
-    public void testIdentifyWinner() throws Exception {
+    public void testIdentifyWinner()  {
         
         computerBooks = newArrayList("A", "2", "4", "7", "9", "K", "Q", "J");
         playerBooks = newArrayList("3", "5", "6", "8", "10");
@@ -264,7 +265,7 @@ public class Question_3_Go_FishTest {
     
     
     @Test(timeout=TIMEOUT)
-    public void testDisplayHand() throws Exception {
+    public void testDisplayHand()  {
         
         ArrayList<String> example = newArrayList("A", "3", "Q");
         
@@ -282,7 +283,7 @@ public class Question_3_Go_FishTest {
     
     
     @Test(timeout=TIMEOUT)
-    public void testPrintGameStats() throws Exception {
+    public void testPrintGameStats()  {
         
         playerBooks = newArrayList("A", "9", "7");
         computerBooks = newArrayList("6", "K");

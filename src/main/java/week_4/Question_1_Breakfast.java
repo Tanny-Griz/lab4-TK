@@ -34,11 +34,11 @@ public class Question_1_Breakfast {
         
         // TODO	Add the name of your favorite breakfast food to the List.
         
-        // TODO	Add “Cornflakes” to the List.
+        // TODO	Add "Cornflakes" to the List.
         
         // TODO	Print all of the items in the ArrayList, one per line
        	
-        // TODO Print the exact message "Special K is in the list" if the list contains “Special K”.
+        // TODO Print the exact message "Special K is in the list" if the list contains "Special K".
        	
         // TODO Print a different message if it does not contain "Special K".
         

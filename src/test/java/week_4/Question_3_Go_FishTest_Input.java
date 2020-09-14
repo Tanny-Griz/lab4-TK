@@ -66,7 +66,7 @@ public class Question_3_Go_FishTest_Input {
 */
     
     @Test(timeout=3000)
-    public void testTurn_OpponentDoesNotHave_PlayerFishesNoBook_1() throws Exception {
+    public void testTurn_OpponentDoesNotHave_PlayerFishesNoBook_1()  {
         
         playScenario(new String[]{"A"},         /* Cards player will request */
                 "Player requests card opponent doesn't have, and has to fish. Does not make book.",  /* Description of play */
@@ -84,7 +84,7 @@ public class Question_3_Go_FishTest_Input {
     }
     
     @Test(timeout=3000)
-    public void testTurn_OpponentDoesHave_ThenDoesNotHave_PlayerFishesNoBook_2() throws Exception {
+    public void testTurn_OpponentDoesHave_ThenDoesNotHave_PlayerFishesNoBook_2()  {
         
         playScenario(new String[]{"3", "2"},         /* Cards player will request */
                 "Player requests card opponent does have. Card transferred. Player requests card opponent doesn't have, and has to fish. Does not make book.",  /* Description of play */
@@ -102,7 +102,7 @@ public class Question_3_Go_FishTest_Input {
     }
     
     @Test(timeout=3000)
-    public void testTurn_OpponentDoesHave_ThenDoesHave_ThenDoesNotHave_PlayerFishesNoBook_3() throws Exception {
+    public void testTurn_OpponentDoesHave_ThenDoesHave_ThenDoesNotHave_PlayerFishesNoBook_3() {
         
         playScenario(new String[]{"2", "3", "A"},         /* Cards player will request */
                 "Player requests card opponent does have. Card transferred. Player requests another card opponent has, card is transferred. Player requests card opponent doesn't have, and has to fish. Does not make book.",  /* Description of play */
@@ -120,7 +120,7 @@ public class Question_3_Go_FishTest_Input {
     }
     
     @Test(timeout=3000)
-    public void testTurn_OpponentDoesNotHave_PlayerFishesMakesBook_4() throws Exception {
+    public void testTurn_OpponentDoesNotHave_PlayerFishesMakesBook_4()  {
         
         playScenario(new String[]{"A"},         /* Cards player will request */
                 "Player requests a card opponent doesn't have, goes fishing, and makes book.",  /* Description of play */
@@ -308,7 +308,7 @@ public class Question_3_Go_FishTest_Input {
     
     
     @Test(timeout=3000)
-    public void testCardValueInputValidInput() throws Exception {
+    public void testCardValueInputValidInput() {
         
         playerHand = newArrayList("A", "2", "4", "7", "9");
         
@@ -323,7 +323,7 @@ public class Question_3_Go_FishTest_Input {
     
     
     @Test(timeout=3000)
-    public void testCardValueInputInvalidInput() throws Exception {
+    public void testCardValueInputInvalidInput() {
         
         playerHand = newArrayList("A", "2", "4", "7", "9");
         

@@ -25,8 +25,6 @@ public class Question_2_Dice_RollTest {
     @Test(timeout=3000)
     public void testRoll()  {
 
-       // Question_2_Dice_Roll Question_2_Dice_Roll = new Question_2_Dice_Roll();
-
         Random rnd = mock(Random.class);
         expect(rnd.nextInt(6))
                 .andReturn(3)

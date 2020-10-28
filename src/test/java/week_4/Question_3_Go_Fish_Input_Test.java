@@ -30,7 +30,7 @@ import static week_4.Question_3_Go_Fish.*;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({InputUtils.class, Question_3_Go_Fish.class})
-public class Question_3_Go_FishTest_Input {
+public class Question_3_Go_Fish_Input_Test {
     
     /*
 

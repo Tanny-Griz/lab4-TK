@@ -7,7 +7,7 @@ ArrayList practice.
 *	Remove "Oatmeal" from the ArrayList.
 *	Add the name of your favorite breakfast food to the ArrayList.
 *	Add "Cornflakes" to the ArrayList.
-*	Print all of the items in the ArrayList, one per line.
+*	Print all the items in the ArrayList, one per line.
 *	Print a message if the ArrayList contains “Special K”. Print a different message if it does not contain "Special K".
 *   Print the number of items in the list, using size()
 *	(Optional) non-programming question: what does Captain Crunch have to do with computer hacking?
@@ -20,14 +20,20 @@ each dice to be rolled, and save the values in an ArrayList.
 
 Display the total of all the dice rolled.
 
+Finish the method that decides if all the dice have the same value.
 In other words, you'll need a method that 
-tests if all of the values in an ArrayList are the same. 
+tests if all the values in an ArrayList are the same. 
+
+This code makes your program crash. 
+You will delete these lines and replace them with your own code. 
+
+`throw new RuntimeException("Finish the roll method");   // TODO replace with your code`
 
 
 ### Question 3 Go Fish
 
 `Question_3_Go_Fish.java` is a first prototype of a program that plays a simplified version of the children's card
-game Go Fish against you.  This version is based from the rules given at [https://en.wikipedia.org/wiki/Go_Fish](Wikipedia)
+game Go Fish against you.  This version is based on the rules given at [https://en.wikipedia.org/wiki/Go_Fish](Wikipedia)
 
 "Seven cards are dealt from a standard 52-card deck to each player.
 The remaining cards are spread out in a disorderly pile referred to as the "pool".

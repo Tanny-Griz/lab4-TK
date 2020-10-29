@@ -61,20 +61,21 @@ public class Question_2_Dice_Roll {
         
         // TODO create an ArrayList of Integer values.
         // TODO Roll the given number of dice. Store the values in an ArrayList and return it.
-        
-       return null;  // TODO Replace with your code
+        // TODO if the numberOfDice is 0 or negative, return an empty List.
+
+        throw new RuntimeException("Finish the roll method");   // TODO Remove and replace with your code
     }
 
 
     public static int diceTotal(List<Integer> diceValues) {
-    
+
         // TODO if the diceValues List is null, return 0.  (hint: do this check first)
         // TODO if the diceValues List is empty, return 0.
         
         // TODO add up all of the values in the List and return this total.
         // TODO this should still work for any number of dice in the diceValues List.
-        
-        return 0;  // TODO Replace with your code.
+
+        throw new RuntimeException("Finish diceTotal method");   // TODO Remove and replace with your code
     }
 
 
@@ -86,8 +87,7 @@ public class Question_2_Dice_Roll {
         // TODO return true if all of the values in the diceValues List are the same.
         // TODO this method should work for 0 dice, 1 dice, 2 dice, 3 dice, 100 dice...
         
-        return false;   // TODO Replace with your code
-
+        throw new RuntimeException("Finish the allSameValue method");   // TODO Replace with your code
     }
     
 }

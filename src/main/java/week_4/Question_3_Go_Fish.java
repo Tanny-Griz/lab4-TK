@@ -110,7 +110,7 @@ public class Question_3_Go_Fish {
         // TODO initialize the global pool variable, to a new ArrayList
         // TODO copy all cards from deck to pool
         // This method should modify the global pool list variable. It does not need to return anything.
-        
+
     }
 
 
@@ -195,10 +195,8 @@ public class Question_3_Go_Fish {
         // If the computer's hand is empty, return null.
         
         // Optional: write your own test for this method.
-        
-        return null;   // TODO replace with your code
-   
-    
+
+        throw new RuntimeException("Finish the selectComputerCardValue method");   // TODO replace with your code
     }
 
 

@@ -1,6 +1,7 @@
 package week_4;
 
 import junit.framework.TestCase;
+import org.junit.Test;
 import test_utils.ArrayListUtils;
 import test_utils.PrintUtils;
 
@@ -10,8 +11,6 @@ import java.util.List;
 import java.util.Map;
 
 public class Question_3_Movie_Watch_ListTest extends TestCase {
-
-
 
     /*
     This method should add the String movie to the END of the movies List,
@@ -38,6 +37,7 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     This method does not need to return anything. */
 
+    @Test(timeout=3000)
     public void testAddMovieEmptyList() {
 
         // Add example movie to empty list
@@ -54,6 +54,7 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     }
 
+    @Test(timeout=3000)
     public void testAddMovieMoviesInList() {
 
         // Test movies added in order
@@ -72,6 +73,7 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     }
 
+    @Test(timeout=3000)
     public void testAddMovieDontAddExactDuplicates() {
 
         List<String> originalList = ArrayListUtils.newArrayList("Wonder Woman", "JAWS", "Star Wars IV: A New Hope");
@@ -94,6 +96,7 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     }
 
+    @Test(timeout=3000)
     public void testAddMovieDontAddDuplicatesInAnyCase() {
 
         List<String> originalList = ArrayListUtils.newArrayList("Wonder Woman", "JAWS", "Star Wars IV: A New Hope");
@@ -116,6 +119,7 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     }
 
+    @Test(timeout=3000)
     public void testGetNextMovie() {
 
         /*
@@ -138,6 +142,8 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     }
 
+
+    @Test(timeout=3000)
     public void testGetNextMovieEmpty() {
 
         /*
@@ -156,6 +162,8 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     }
 
+
+    @Test(timeout=3000)
     public void testGetNextMovieNull() {
 
         /*
@@ -174,6 +182,8 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     }
 
+
+    @Test(timeout=3000)
     public void testRemoveMovieCaseMatch() {
 
         /*  Remove the movie from the movies list.
@@ -207,6 +217,8 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     }
 
+
+    @Test(timeout=3000)
     public void testRemoveMovieDifferentCase() {
         List<String> workingList = ArrayListUtils.newArrayList("Wonder Woman", "JAWS", "Star Wars IV: A New Hope");
         List<String> expectedModifiedList = ArrayListUtils.newArrayList("Wonder Woman", "Star Wars IV: A New Hope");
@@ -228,6 +240,8 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     }
 
+
+    @Test(timeout=3000)
     public void testRemoveMovieNotFound() {
 
         List<String> workingList = ArrayListUtils.newArrayList("Wonder Woman", "JAWS", "Star Wars IV: A New Hope");
@@ -242,6 +256,8 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     }
 
+
+    @Test(timeout=3000)
     public void testRemoveMovieListEmpty() {
 
         List<String> empty = new ArrayList<>();
@@ -254,6 +270,8 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     }
 
+
+    @Test(timeout=3000)
     public void testRemoveMovieListNull() {
 
         List<String> nullList = null;
@@ -266,6 +284,8 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     }
 
+
+    @Test(timeout=3000)
     public void testGetRandomMovieFromWatchList() {
 
         /*    Return the name of a random movie from the movies list.
@@ -281,7 +301,7 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
         for (int x = 0 ; x < 100 ; x++) {
             String randomMovie = Question_3_Movie_Watch_List.getRandomMovieFromWatchList(workingList);
-            counts.computeIfPresent(randomMovie, (name, count) -> count++);
+            counts.put(randomMovie, counts.get(randomMovie) + 1);
         }
 
         // If names are picked at random, would expect at least some of each name - choosing
@@ -294,12 +314,15 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
     }
 
+
+    @Test(timeout=3000)
     public void testRandomMovieListNull() {
         String randomMovie = Question_3_Movie_Watch_List.getRandomMovieFromWatchList(null);
         assertNull("If getRandomMovieFromWatchList is called and the movie list is null, return null", randomMovie);
     }
 
 
+    @Test(timeout=3000)
     public void testRandomMovieListEmpty() {
         List<String> emptyList = new ArrayList<>();
         String randomMovie = Question_3_Movie_Watch_List.getRandomMovieFromWatchList(emptyList);
@@ -307,6 +330,7 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
     }
 
 
+    @Test(timeout=3000)
     public void testPrintMoviesInNameOrder() {
         /*   Print the movie names in alphabetical order, one movie per line.
 
@@ -362,13 +386,20 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
         output = output.trim();
 
         String message = "If the movie list contains " + workingList + "\n"
-                + "then the printMoviesInWatchListOrder should print the following. \n" +
-                "Print one movie on each line, and don't print any numbers or anything else. ";
+                + "then the printMoviesInWatchListOrder should print the following. \n\n"
+                + "Scream\n"
+                + "Up\n"
+                + "frozen\n"
+                + "inside out\n\n" +
+                "Print one movie on each line, don't modify the movie names, and don't print any numbers or anything else. \n" +
+                "  \"If you think your output is correct but the test is failing, please push code to GitHub and email Clara \";\n";
 
         assertTrue(message, output.matches(expectedRegexPattern));
         assertTrue("Don't modify the movie list", ArrayListUtils.arrayListEqual(workingList, originalList, true));
     }
 
+
+    @Test(timeout=3000)
     public void testPrintMoviesInNameOrderEmptyList() {
 
         PrintUtils.catchStandardOut();
@@ -388,6 +419,8 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
         assertTrue("If the movies list is empty or null, print the message 'No movies'", output.toLowerCase().contains("no movies"));
     }
 
+
+    @Test(timeout=3000)
     public void testPrintMoviesInWatchListOrder() {
         /*  TODO Print the movie names in watchlist order, one movie per line.
         Include a number to indicate the movie's position in the watch list.
@@ -424,7 +457,8 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
                 + "2. UP\n"
                 + "3. inside out\n"
                 + "4. Scream\n\n" +
-                "Include the numbers, print one movie on each line, and don't print anything else. ";
+                "Include the numbers, starting at 1. Print one movie on each line, and don't print anything else.\n" +
+                "If you think your output is correct but the test is failing, please push code to GitHub and email Clara ";
 
         assertTrue(message, output.matches(expectedRegexPattern));
         assertTrue("Don't modify the movie list", ArrayListUtils.arrayListEqual(workingList, originalList, true));
@@ -432,6 +466,7 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
     }
 
 
+    @Test(timeout=3000)
     public void testPrintMoviesInWatchListOrderEmptyList() {
 
         PrintUtils.catchStandardOut();

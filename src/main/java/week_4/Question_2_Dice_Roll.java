@@ -60,7 +60,7 @@ public class Question_2_Dice_Roll {
         // Don't create another Random object.
         
         // TODO create an ArrayList of Integer values.
-        // TODO Roll the given number of dice. Store the values in an ArrayList and return it.
+        // TODO Use a loop to roll the given number of dice. Store the values in an ArrayList and return it.
         // TODO if the numberOfDice is 0 or negative, return an empty List.
 
         throw new RuntimeException("Finish the roll method");   // TODO Remove and replace with your code

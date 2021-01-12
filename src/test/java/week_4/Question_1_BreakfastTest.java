@@ -4,6 +4,7 @@ import org.junit.Test;
 import test_utils.PrintUtils;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -12,25 +13,23 @@ public class Question_1_BreakfastTest {
     @Test(timeout=3000)
     public void testCereals()  {
 
-        Question_1_Breakfast q1 = new Question_1_Breakfast();
-   
         PrintUtils.catchStandardOut();
 
-        q1.cereals();
+        List<String> cereals = Question_1_Breakfast.breakfast();
 
         String out = PrintUtils.resetStandardOut();
         
         // Test that 'Cornflakes" was added
-        assertTrue("Add 'Cornflakes' to the list", q1.cereals.contains("Cornflakes"));
+        assertTrue("Add the String 'Cornflakes' to the list", cereals.contains("Cornflakes"));
         
         // Test that "Oatmeal" was removed
-        assertFalse("Remove 'Oatmeal' from the list", q1.cereals.contains("Oatmeal"));
+        assertFalse("Remove the String 'Oatmeal' from the list", cereals.contains("Oatmeal"));
         
         // And when the favorite breakfast is added, there should be 4 items in the list
-        assertEquals("Add your favorite breakfast food to the list", 4, q1.cereals.size());
+        assertEquals("Add your favorite breakfast food to the list", 4, cereals.size());
         
         // Check that all elements of ArrayList are printed. Don't care what order.
-        for (String c : q1.cereals) {
+        for (String c : cereals) {
             assertTrue("Print all of the items in the list", out.contains(c));
         }
         

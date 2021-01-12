@@ -227,6 +227,8 @@ public class Question_3_Movie_Watch_List {
 
          ** Don't modify the original movies list! **
 
+         Don't print anything else - only the names of movies and the numbers.
+
          If the movies list contains ['Up', 'Jaws', 'Spiderman'] you will
          print
 

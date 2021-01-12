@@ -56,6 +56,8 @@ public class Question_2_Dice_Roll {
     
     public static List<Integer> roll(int numberOfDice) {
 
+        // Part 1.
+        //
         // Use the Random rnd variable declared on line 28 to generate random numbers.
         // Don't create another Random object.
         
@@ -69,6 +71,8 @@ public class Question_2_Dice_Roll {
 
     public static int diceTotal(List<Integer> diceValues) {
 
+        // Part 2.
+        //
         // TODO if the diceValues List is null, return 0.  (hint: do this check first)
         // TODO if the diceValues List is empty, return 0.
         
@@ -81,6 +85,8 @@ public class Question_2_Dice_Roll {
 
     public static boolean allSameValue(List<Integer> diceValues) {
     
+        // Part 3.
+        //
         // TODO if the diceValues List is null, return false. (hint: do this check first)
         // TODO if the diceValues List is empty, return false
     

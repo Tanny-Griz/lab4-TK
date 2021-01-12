@@ -15,43 +15,132 @@ ArrayList practice.
 
 ### Question 2 Dice
 
-Write a program to roll a set of dice. Generate a random number between 1 and 6 for
+Finish this program to roll a set of dice. 
+
+Complete code in the methods.
+
+**Part 1** Generate a random number between 1 and 6 for
 each dice to be rolled, and save the values in an ArrayList.
 
-Display the total of all the dice rolled.
+**Part 2** Display the total of all the dice rolled.
 
-Finish the method that decides if all the dice have the same value.
+**Part 3** Finish the method that decides if all the dice have the same value.
 In other words, you'll need a method that 
 tests if all the values in an ArrayList are the same. 
 
-This code makes your program crash. 
+Note that these lines of code deliberately make your program crash. 
 You will delete these lines and replace them with your own code. 
-
 `throw new RuntimeException("Finish the roll method");   // TODO replace with your code`
 
 
-### Question 3 Go Fish
+### Question 3 Movie Watch List
 
-`Question_3_Go_Fish.java` is a first prototype of a program that plays a simplified version of the children's card
-game Go Fish against you.  This version is based on the rules given at [https://en.wikipedia.org/wiki/Go_Fish](Wikipedia)
+Finish this program to create and manage a movie watchlist.
 
-"Seven cards are dealt from a standard 52-card deck to each player.
-The remaining cards are spread out in a disorderly pile referred to as the "pool".
-The player whose turn it is to play asks another player for his or her cards of a
-particular face value. For example Alice may ask, "Bob, do you have any threes?"
-Alice must have at least one card of the rank she requested. Bob must hand
-over all cards of that rank if possible. If he has none, Bob tells Alice to "go fish"
-and Alice draws a card from the pool and places it in her own hand.
+**Part 1**: Finish the method to add a String movie to the END of the movies List,
+but only if the movie is not in the list.
 
-Then it is the next player's turn – unless the card Alice is given is the card she asked for,
-in which case she shows it to the other players, and she gets another turn. When any player at
-any time has all four cards of one face value, it forms a book, and the cards must be placed
-face up in front of that player.
+Don't change the case of the movie string when adding it to the movies list.
+If the movie is 'WALL-E' then add this exact string.
+If the movie is 'Star Wars: Episode IV – A New Hope' add this exact string.
 
-The players take turns. When all sets of cards have been laid down in books, the game ends.
-The player with the most books wins."
+If the movies list contains ['Up', 'Jaws', 'Spiderman']
+and the movie String is 'Rocky' then it should be added to the end of the list.
+The movies list will become ['Up', 'Jaws', 'Spiderman', 'Rocky']
+Print the message "Movie added!"
 
-Your tasks: finish the incomplete methods. Run and test the program.
-You might want to add some extra System.out.println() statements to update the player on the status of the game.
+Don't add the movie if it is already in the movies list.
+Your check should be case-insensitive.
+If the movies list contains ['Up', 'Jaws', 'Spiderman']
+and if the movie String is 'Up' then it should NOT be added.
+or, if the movie String is 'up' then it should NOT be added.
+or, if the movie String is 'UP' then it should NOT be added.
 
-Optional extra challenge: Write your own test to check the behavior of your selectComputerCardValue method.
+If the movie is already in the list, print the message "This movie is already in your watchlist!"
+
+This method does not need to return anything.
+
+
+**Part 2**  Get the next movie to watch.
+
+If the movies list is not null, and has as at least one movie in it,
+return the first movie in the list.
+
+Don't modify the movies list.
+
+If the movies list is null, or empty, return null.
+Hint: check if the list is null or empty first.
+
+
+**Part 3** Finish the method to remove a movie from the movies list.
+Your check should be case-insensitive.
+
+If the movie is in the movies list, remove that movie and print the
+message "Movie removed!"
+
+If the movies list contains ['Up', 'Jaws', 'Spiderman']
+and the movie String is 'Jaws' then the 'Jaws' entry in the list should be removed.
+or if the movie String is 'jaws' then the 'Jaws' entry in the list should be removed.
+or if the movie String is 'JAWS' then the 'Jaws' entry in the list should be removed.
+
+Print the message "Movie removed!"
+
+If the movies list contains ['Up', 'Jaws', 'Spiderman']
+and the movie String is 'Rocky' then don't modify the movies list
+Print the message "Movie not found!"
+
+If the movies list is null, or empty, print the message "Movie not found!"
+Hint: check if the list is null or empty first.
+
+
+**Part 4**  Return the name of a random movie from the movies list.
+
+ If the movies list is null, or empty, return null.
+ Hint: check if the list is null or empty first.
+
+
+**Part 5** Finish this method to print the movie names in alphabetical order, one movie per line.
+
+** Don't modify the original movies list! **
+
+If the movies list contains ['Up', 'Jaws', 'Spiderman'] you will
+print
+
+Jaws
+Spiderman
+Up
+
+You should sort the movies using Java's default sort order for strings,
+and print the exact text of the movie names from the list.
+
+If the movies list contains ['Up', 'jaws', 'Spiderman']
+Note 'jaws' has lowercase 'j' and lowercase letters are sorted after
+uppercase letters.
+
+you will print
+
+Spiderman
+Up
+jaws
+
+
+If the movies list is empty or null, print the message 'No movies'
+
+This method will not return anything.
+
+
+**Part 6** Finish the method to print the movie names in watchlist order, one movie per line.
+Include a number to indicate the movie's position in the watch list.
+
+** Don't modify the original movies list! **
+
+If the movies list contains ['Up', 'Jaws', 'Spiderman'] you will
+print
+
+1. Up
+2. Jaws
+3. Spiderman
+
+If the movies list is empty or null, print the message 'No movies'
+
+

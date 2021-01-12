@@ -351,11 +351,7 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
 
         */
 
-        String expectedRegexPattern =
-                ".*Scream.*\n.*" +
-                "UP.*\n.*" +
-                "frozen.*\n.*" +
-                "inside out.*\n.*";
+        String expectedRegexPattern = ".*Scream.*\\n.*UP.*\\n.*frozen.*\\n.*inside out.*";
 
         PrintUtils.catchStandardOut();
 
@@ -412,11 +408,7 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
         List<String> workingList = ArrayListUtils.newArrayList("frozen", "UP", "inside out", "Scream");
         List<String> originalList = ArrayListUtils.newArrayList("frozen", "UP", "inside out", "Scream");
 
-        String expectedRegexPattern = "" +
-                ".*1.*frozen.*\n" +
-                ".*2.*UP.*\n" +
-                ".*3.*inside out.*\n" +
-                ".*4.*Scream.*";
+        String expectedRegexPattern = ".*1.*frozen.*\\n.*2.*UP.*\\n.*3.*inside out.*\\n.*Scream.*";
 
         PrintUtils.catchStandardOut();
 

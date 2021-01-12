@@ -17,7 +17,7 @@ ArrayList practice.
 
 Finish this program to roll a set of dice. 
 
-Complete code in the methods.
+Complete the code in the methods.
 
 **Part 1** Generate a random number between 1 and 6 for
 each dice to be rolled, and save the values in an ArrayList.
@@ -35,7 +35,7 @@ You will delete these lines and replace them with your own code.
 
 ### Question 3 Movie Watch List
 
-Finish this program to create and manage a movie watchlist.
+Finish this program to create and manage a movie watchlist. You will finish the code in the methods.
 
 **Part 1**: Finish the method to add a String movie to the END of the movies List,
 but only if the movie is not in the list.
@@ -130,7 +130,7 @@ This method will not return anything.
 
 
 **Part 6** Finish the method to print the movie names in watchlist order, one movie per line.
-Include a number to indicate the movie's position in the watch list.
+Include a number to indicate the movie's position in the watch list. The numbers should start from 1.
 
 ** Don't modify the original movies list! **
 

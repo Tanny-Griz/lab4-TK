@@ -5,19 +5,19 @@
       "question" : 1,
       "java_file": "Question_1_Breakfast",
       "test_files": ["week_4.Question_1_BreakfastTest"],
-      "points": 2
+      "points": 3
     },
     {
       "question" : 2,
       "java_file": "Question_2_Dice_Roll",
       "test_files": ["week_4.Question_2_Dice_RollTest"],
-      "points": 5
+      "points": 7
     },
     {
       "question" : 3,
-      "java_file": "Question_3_Go_Fish",
-      "test_files": ["week_4.Question_3_Go_FishTest", "week_4.Question_3_Go_Fish_Input_Test"],
-      "points": 13
+      "java_file": "Question_3_Movie_Watch_List",
+      "test_files": ["week_4.Question_3_Movie_Watch_ListTest"],
+      "points": 10
     }
   ]
 }

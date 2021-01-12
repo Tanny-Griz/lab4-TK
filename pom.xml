@@ -28,19 +28,19 @@
                 </configuration>
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>edu.minneapolis</groupId>-->
-<!--                <artifactId>ygi-maven-plugin</artifactId>-->
-<!--                <version>0.0.2-alpha-4</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>test</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>ygi</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>edu.minneapolis</groupId>
+                <artifactId>ygi-maven-plugin</artifactId>
+                <version>0.0.2-alpha-4</version>
+                <executions>
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>ygi</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
         </plugins>
     </build>

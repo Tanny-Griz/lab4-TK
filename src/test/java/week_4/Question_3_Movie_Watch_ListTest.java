@@ -294,6 +294,7 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
          movies and checks the distribution seems to be random.  */
 
         List<String> workingList = ArrayListUtils.newArrayList("Wonder Woman", "JAWS", "Star Wars");
+        List<String> originalList = ArrayListUtils.newArrayList("Wonder Woman", "JAWS", "Star Wars");
 
         Map<String, Integer> counts = new HashMap<>();
 
@@ -311,6 +312,8 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
             assertTrue("If movie names are selected at random, each name should be chosen at " +
                     "least a few times if the getRandomMovieFromWatchList is called many times", val > 15);
         }
+
+        assertTrue("Don't modify the movie list when choosing a random movie", ArrayListUtils.arrayListEqual(originalList, workingList));
 
     }
 

@@ -419,7 +419,11 @@ public class Question_3_Movie_Watch_ListTest extends TestCase {
         output = output.trim();
 
         String message = "If the movie list contains " + workingList + "\n"
-                + "then the printMoviesInWatchListOrder should print the following. \n" +
+                + "then the printMoviesInWatchListOrder should print the following. \n\n"
+                + "1. frozen\n"
+                + "2. UP\n"
+                + "3. inside out\n"
+                + "4. Scream\n\n" +
                 "Include the numbers, print one movie on each line, and don't print anything else. ";
 
         assertTrue(message, output.matches(expectedRegexPattern));

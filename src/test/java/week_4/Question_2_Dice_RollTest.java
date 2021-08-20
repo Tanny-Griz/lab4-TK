@@ -1,9 +1,7 @@
 package week_4;
 
-import input.InputUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 import test_utils.ArrayListUtils;
 
@@ -18,7 +16,6 @@ import static test_utils.ArrayListUtils.newArrayList;
 
 
 @RunWith(PowerMockRunner.class)
-@PrepareForTest(InputUtils.class)
 public class Question_2_Dice_RollTest {
     
 
@@ -75,7 +72,6 @@ public class Question_2_Dice_RollTest {
     @Test(timeout=3000)
     public void testDiceTotalEmptyList()  {
         assertEquals("If the ArrayList is empty, return 0", 0, Question_2_Dice_Roll.diceTotal(new ArrayList<>()));
-        
     }
 
     

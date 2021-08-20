@@ -1,6 +1,6 @@
 package week_4;
 
-import junit.framework.TestCase;
+//import junit.framework.TestCase;
 import org.junit.Test;
 import test_utils.ArrayListUtils;
 import test_utils.PrintUtils;
@@ -10,7 +10,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Question_3_Movie_Watch_ListTest extends TestCase {
+import static org.junit.Assert.*;
+
+public class Question_3_Movie_Watch_ListTest {
 
     /*
     This method should add the String movie to the END of the movies List,

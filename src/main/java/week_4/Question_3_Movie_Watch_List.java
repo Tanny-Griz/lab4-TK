@@ -99,7 +99,7 @@ public class Question_3_Movie_Watch_List {
 
          */
 
-        throw new RuntimeException("Finish this method and then remove this line");
+        throw new RuntimeException("Finish this method and then remove this line");  // TODO remove and replace with your code
 
     }
 
@@ -121,7 +121,7 @@ public class Question_3_Movie_Watch_List {
          */
 
 
-        throw new RuntimeException("Finish this method and then remove this line");
+        throw new RuntimeException("Finish this method and then remove this line");  // TODO remove and replace with your code
     }
 
 
@@ -154,7 +154,7 @@ public class Question_3_Movie_Watch_List {
          */
 
 
-        throw new RuntimeException("Finish this method and then remove this line");
+        throw new RuntimeException("Finish this method and then remove this line");  // TODO remove and replace with your code
 
     }
 
@@ -173,7 +173,7 @@ public class Question_3_Movie_Watch_List {
 
          */
 
-        throw new RuntimeException("Finish this method and then remove this line");
+        throw new RuntimeException("Finish this method and then remove this line");  // TODO remove and replace with your code
     }
 
 
@@ -214,7 +214,7 @@ public class Question_3_Movie_Watch_List {
          */
 
 
-        throw new RuntimeException("Finish this method and then remove this line");
+        throw new RuntimeException("Finish this method and then remove this line");  // TODO remove and replace with your code
     }
 
 
@@ -229,8 +229,7 @@ public class Question_3_Movie_Watch_List {
 
          Don't print anything else - only the names of movies and the numbers.
 
-         If the movies list contains ['Up', 'Jaws', 'Spiderman'] you will
-         print
+         If the movies list contains ['Up', 'Jaws', 'Spiderman'] you will print
 
          1. Up
          2. Jaws
@@ -238,10 +237,10 @@ public class Question_3_Movie_Watch_List {
 
          If the movies list is empty or null, print the message 'No movies'
 
-        This method will not return anything.
-         * */
+        This method does not return anything.
+          */
 
-        throw new RuntimeException("Finish this method and then remove this line");
+        throw new RuntimeException("Finish this method and then remove this line");  // TODO remove and replace with your code
 
     }
 

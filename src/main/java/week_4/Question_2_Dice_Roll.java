@@ -64,6 +64,7 @@ public class Question_2_Dice_Roll {
         // TODO if the numberOfDice is 0 or negative, return an empty List.
 
         throw new RuntimeException("Finish the roll method");   // TODO remove and replace with your code
+
     }
 
 

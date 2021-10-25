@@ -10,7 +10,7 @@
     {
       "question" : 2,
       "java_file": "Question_2_Dice_Roll",
-      "test_files": ["week_4.Question_2_Dice_RollTest"],
+      "test_files": ["week_4.Question_2_Dice_RollTest", "Question_2_Dice_Roll_AnalysisTest"],
       "points": 7
     },
     {

@@ -391,7 +391,7 @@ public class Question_3_Movie_Watch_ListTest {
         output = output.trim();
 
         String message = "If the movie list contains " + workingList + "\n"
-                + "then the printMoviesInWatchListOrder should print the following. \n\n"
+                + "then the printMoviesInNameListOrder should print the following. \n\n"
                 + "Scream\n"
                 + "Up\n"
                 + "frozen\n"

@@ -99,7 +99,7 @@ public class Question_3_Movie_Watch_List {
 
          */
 
-        throw new RuntimeException("Finish this method and then remove this line");  // TODO remove and replace with your code
+        throw new RuntimeException("Finish this method and then remove this line. Once you've written your code, remove this line otherwise your code will always crash.");  // TODO remove and replace with your code
 
     }
 
@@ -121,7 +121,7 @@ public class Question_3_Movie_Watch_List {
          */
 
 
-        throw new RuntimeException("Finish this method and then remove this line");  // TODO remove and replace with your code
+        throw new RuntimeException("Finish this method and then remove this line. Once you've written your code, remove this line otherwise your code will always crash.");  // TODO remove and replace with your code
     }
 
 
@@ -154,7 +154,7 @@ public class Question_3_Movie_Watch_List {
          */
 
 
-        throw new RuntimeException("Finish this method and then remove this line");  // TODO remove and replace with your code
+        throw new RuntimeException("Finish this method and then remove this line. Once you've written your code, remove this line otherwise your code will always crash.");  // TODO remove and replace with your code
 
     }
 
@@ -173,7 +173,7 @@ public class Question_3_Movie_Watch_List {
 
          */
 
-        throw new RuntimeException("Finish this method and then remove this line");  // TODO remove and replace with your code
+        throw new RuntimeException("Finish this method and then remove this line. Once you've written your code, remove this line otherwise your code will always crash.");  // TODO remove and replace with your code
     }
 
 
@@ -214,7 +214,7 @@ public class Question_3_Movie_Watch_List {
          */
 
 
-        throw new RuntimeException("Finish this method and then remove this line");  // TODO remove and replace with your code
+        throw new RuntimeException("Finish this method and then remove this line. Once you've written your code, remove this line otherwise your code will always crash.");  // TODO remove and replace with your code
     }
 
 
@@ -240,7 +240,7 @@ public class Question_3_Movie_Watch_List {
         This method does not return anything.
           */
 
-        throw new RuntimeException("Finish this method and then remove this line");  // TODO remove and replace with your code
+        throw new RuntimeException("Finish this method and then remove this line. Once you've written your code, remove this line otherwise your code will always crash.");  // TODO remove and replace with your code
 
     }
 

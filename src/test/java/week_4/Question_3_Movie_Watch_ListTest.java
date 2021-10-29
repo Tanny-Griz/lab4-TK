@@ -1,6 +1,5 @@
 package week_4;
 
-//import junit.framework.TestCase;
 import org.junit.Test;
 import test_utils.ArrayListUtils;
 import test_utils.PrintUtils;
@@ -228,7 +227,9 @@ public class Question_3_Movie_Watch_ListTest {
         Question_3_Movie_Watch_List.removeMovie("JaWs", workingList);
         String output = PrintUtils.resetStandardOut();
 
-        assertTrue("Remove the movie from the movie list", ArrayListUtils.arrayListEqual(expectedModifiedList, workingList));
+        assertTrue("Remove the movie from the movie list" +
+                "\nHint: will movies.remove(movie) work if movie=\"JaWs\" and movies=[\"Wonder Woman\", \"JAWS\", \"Star Wars IV: A New Hope\"]  ?",
+                ArrayListUtils.arrayListEqual(expectedModifiedList, workingList));
         assertTrue("Print the message 'Movie removed!' when a movie is removed", output.toLowerCase().contains("movie removed"));
 
 
@@ -237,7 +238,11 @@ public class Question_3_Movie_Watch_ListTest {
         Question_3_Movie_Watch_List.removeMovie("StAr waRS iV: A nEw hope", workingList);
         output = PrintUtils.resetStandardOut();
 
-        assertTrue("Remove the movie from the movie list", ArrayListUtils.arrayListEqual(expectedModifiedList2, workingList));
+        assertTrue("Remove the movie from the movie list." +
+                "\nHint: will movies.remove(movie) work if movie=\"StAr waRS iV: A nEw hope\" and movies=[\"Wonder Woman\", \"Star Wars IV: A New Hope\"]  ?",
+
+                ArrayListUtils.arrayListEqual(expectedModifiedList2, workingList));
+
         assertTrue("Print the message 'Movie removed!' when a movie is removed", output.toLowerCase().contains("movie removed"));
 
     }
@@ -300,7 +305,7 @@ public class Question_3_Movie_Watch_ListTest {
 
         Map<String, Integer> counts = new HashMap<>();
 
-        workingList.forEach(name -> counts.put(name, 1));
+        workingList.forEach(name -> counts.put(name, 0));
 
         for (int x = 0 ; x < 100 ; x++) {
             String randomMovie = Question_3_Movie_Watch_List.getRandomMovieFromWatchList(workingList);
@@ -308,7 +313,7 @@ public class Question_3_Movie_Watch_ListTest {
         }
 
         // If names are picked at random, would expect at least some of each name - choosing
-        // one of three names at random, at least 15 of each name
+        // one of three names at random, there should be at least 15 of each name
 
         for (int val: counts.values()) {
             assertTrue("If movie names are selected at random, each name should be chosen at " +
@@ -380,7 +385,8 @@ public class Question_3_Movie_Watch_ListTest {
 
         */
 
-        String expectedRegexPattern = ".*Scream.*\\n.*UP.*\\n.*frozen.*\\n.*inside out.*";
+        // being SPECIFIC otherwise printing a lot of stuff may be considered a pass
+        String expectedRegexPattern = "Scream\\nUP\\nfrozen\\ninside out";
 
         PrintUtils.catchStandardOut();
 
@@ -396,11 +402,12 @@ public class Question_3_Movie_Watch_ListTest {
                 + "Up\n"
                 + "frozen\n"
                 + "inside out\n\n" +
-                "Print one movie on each line, don't modify the movie names, and don't print any numbers or anything else. \n" +
+                "Print one movie on each line, don't modify the movie names, and don't print any numbers, extra spaces, extra blank lines, or anything else. \n" +
                 "  \"If you think your output is correct but the test is failing, please push code to GitHub and email Clara \";\n";
 
         assertTrue(message, output.matches(expectedRegexPattern));
-        assertTrue("Don't modify the movie list", ArrayListUtils.arrayListEqual(workingList, originalList, true));
+        assertTrue("Don't modify the movie list. Hint: don't sort the original list. Can you make a copy, and sort the copy?",
+                ArrayListUtils.arrayListEqual(workingList, originalList, true));
     }
 
 
@@ -427,7 +434,7 @@ public class Question_3_Movie_Watch_ListTest {
 
     @Test(timeout=3000)
     public void testPrintMoviesInWatchListOrder() {
-        /*  TODO Print the movie names in watchlist order, one movie per line.
+        /*  Print the movie names in watchlist order, one movie per line.
         Include a number to indicate the movie's position in the watch list.
 
          ** Don't modify the original movies list! **

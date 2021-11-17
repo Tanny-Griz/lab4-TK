@@ -27,6 +27,7 @@ each dice to be rolled, and save the values in an ArrayList.
 **Part 3** Finish the method that decides if all the dice have the same value.
 In other words, you'll need a method that 
 tests if all the values in an ArrayList are the same. 
+In some games, the order of that the dice were rolled in, is important. So, don't modify the order of numbers in the diceValues list.
 
 Note that these lines of code deliberately make your program crash. 
 You will delete these lines and replace them with your own code. 

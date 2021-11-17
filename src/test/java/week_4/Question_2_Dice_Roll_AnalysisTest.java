@@ -1,6 +1,7 @@
 package week_4;
 
 import org.junit.Test;
+import test_utils.ArrayListUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,18 +56,38 @@ public class Question_2_Dice_Roll_AnalysisTest {
     @Test(timeout=3000)
     public void testAllSameValueNotSameValue() {
 
-        List<Integer> example = newArrayList(4, 5, 3);
-        assertFalse("allSameValue called with an ArrayList of 4, 5, 3 should return false", Question_2_Dice_Roll.allSameValue(example));
+        List<Integer> example = newArrayList(4, 5, 3, 1, 6, 4, 4, 4);
+        assertFalse("allSameValue called with an ArrayList of 4, 5, 3, 1, 6, 4, 4, 4 should return false", Question_2_Dice_Roll.allSameValue(example));
+
+        example = newArrayList(1, 2, 3);
+        assertFalse("allSameValue called with an ArrayList of 1, 2, 3 should return false", Question_2_Dice_Roll.allSameValue(example));
+
+        example = newArrayList(6, 5, 4);
+        assertFalse("allSameValue called with an ArrayList of 6, 5, 4 should return false", Question_2_Dice_Roll.allSameValue(example));
 
         example = newArrayList(4, 4, 4, 4, 3);
         assertFalse("allSameValue called with an ArrayList of 4, 4, 4, 4, 3 should return false", Question_2_Dice_Roll.allSameValue(example));
 
         example = newArrayList(3, 1, 1, 1);
         assertFalse("allSameValue called with an ArrayList of 3, 1, 1, 1 should return false", Question_2_Dice_Roll.allSameValue(example));
-    
+
+        example = newArrayList(1, 2);
+        assertFalse("allSameValue called with an ArrayList of 1, 2 should return false", Question_2_Dice_Roll.allSameValue(example));
+
     }
 
-    
+
+    @Test(timeout=3000)
+    public void testAllSameValueDontModifyList() {
+
+        List<Integer> dice = newArrayList(4, 5, 3, 1, 6, 1);
+        List<Integer> original = newArrayList(4, 5, 3, 1, 6, 1);
+
+        Question_2_Dice_Roll.allSameValue(dice);
+        assertTrue("All sameValueShould not sort or otherwise modify the diceValues list.", ArrayListUtils.arrayListEqual(dice, original));
+    }
+
+
     @Test(timeout=3000)
     public void testAllSameValueEmptyList() {
     

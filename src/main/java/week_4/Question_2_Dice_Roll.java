@@ -87,6 +87,8 @@ public class Question_2_Dice_Roll {
     
         // TODO return true if all of the values in the diceValues List are the same.
         // TODO this method should work for 0 dice, 1 dice, 2 dice, 3 dice, 100 dice...
+
+        // TODO In some games, the order of the dice matters, so don't sort or otherwise modify the diceValues list.
         
         throw new RuntimeException("Finish the allSameValue method. Once you've written your code, remove this line otherwise your code will always crash.");   // TODO remove and replace with your code
     }

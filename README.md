@@ -1,4 +1,4 @@
-## Java Lab 4, Data Structures
+## Java Lab 4, Lists
 
 Instructions:
 

@@ -399,7 +399,7 @@ public class Question_3_Movie_Watch_ListTest {
         String message = "If the movie list contains " + workingList + "\n"
                 + "then the printMoviesInNameListOrder should print the following. \n\n"
                 + "Scream\n"
-                + "Up\n"
+                + "UP\n"
                 + "frozen\n"
                 + "inside out\n\n" +
                 "Print one movie on each line, don't modify the movie names, and don't print any numbers, extra spaces, extra blank lines, or anything else. \n" +

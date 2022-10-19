@@ -168,6 +168,8 @@ public class Question_3_Movie_Watch_List {
 
          Return the name of a random movie from the movies list.
 
+         Don't modify the movies list.
+
          If the movies list is null, or empty, return null.
          Hint: check if the list is null or empty first.
 

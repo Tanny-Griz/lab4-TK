@@ -33,18 +33,33 @@ public class Question_1_Breakfast {
         cereals.add("Oatmeal");
         
        	// TODO Remove "Oatmeal" from the ArrayList.
+        cereals.remove("Oatmeal");
         
         // TODO	Add the name of your favorite breakfast food to the List.
+        cereals.add("Tea");
         
         // TODO	Add the String "Cornflakes" to the List.
+        cereals.add("Cornflakes");
         
         // TODO	Print all of the items in the ArrayList, one per line. Use a loop.
+        for (String cereal : cereals) {
+            System.out.println(cereal);
+        }
        	
         // TODO Use an if-statement to print the exact message "Special K is in the list" if the list contains "Special K".
+        if (cereals.contains("Special K")) {
+            System.out.println("Special K is in the list");
+        }
        	
         // TODO Print a different message if it does not contain "Special K".
+        if (cereals.contains("Special K")) {
+            System.out.println("Special K is in the list");
+        } else {
+            System.out.println("Special K is not in the list");
+        }
         
         // TODO Print a message with the number of items in the list
+        System.out.println("Number of items: " + cereals.size());
         
         // TODO	(optional) non-programming question: what does Captain Crunch have to do with computer hacking?
 

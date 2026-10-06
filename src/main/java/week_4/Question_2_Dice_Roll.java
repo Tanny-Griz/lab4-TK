@@ -60,10 +60,20 @@ public class Question_2_Dice_Roll {
         // Don't create another Random object.
         
         // TODO create an ArrayList of Integer values.
-        // TODO Use a loop to roll the given number of dice. Store the values in an ArrayList and return it.
-        // TODO if the numberOfDice is 0 or negative, return an empty List.
+        List<Integer> diceValues = new ArrayList<>();
 
-        throw new RuntimeException("Finish the roll method. Once you've written your code, remove this line otherwise your code will always crash.");   // TODO remove and replace with your code
+        // TODO if the numberOfDice is 0 or negative, return an empty List.
+        if (numberOfDice <= 0) {
+            return diceValues;
+        }
+
+        // TODO Use a loop to roll the given number of dice. Store the values in an ArrayList and return it.
+        for (int i = 0; i < numberOfDice; i++) {
+            int value = rnd.nextInt(6) + 1;
+            diceValues.add(value);
+        }
+
+        return diceValues;
 
     }
 
@@ -71,26 +81,50 @@ public class Question_2_Dice_Roll {
     public static int diceTotal(List<Integer> diceValues) {
 
         // TODO if the diceValues List is null, return 0.  (hint: do this check first)
+        if (diceValues == null) {
+            return 0;
+        }
+
         // TODO if the diceValues List is empty, return 0.
+        if (diceValues.isEmpty()) {
+            return 0;
+        }
         
         // TODO add up all of the values in the List and return this total.
-        // TODO this should still work for any number of dice in the diceValues List.
+        int total = 0;
 
-        throw new RuntimeException("Finish diceTotal method. Once you've written your code, remove this line otherwise your code will always crash.");   // TODO remove and replace with your code
+        for (int value : diceValues) {
+            total += value;
+        }
+
+        // TODO this should still work for any number of dice in the diceValues List.
+        return total;
     }
 
 
     public static boolean allSameValue(List<Integer> diceValues) {
     
         // TODO if the diceValues List is null, return false. (hint: do this check first)
+        if (diceValues == null) {
+            return false;
+        }
         // TODO if the diceValues List is empty, return false
+        if (diceValues.isEmpty()) {
+            return false;
+        }
     
         // TODO return true if all of the values in the diceValues List are the same.
+        int firstValue = diceValues.get(0);
+        for (int value : diceValues) {
+            if (value != firstValue) {
+                return false;
+            }
+        }
         // TODO this method should work for 0 dice, 1 dice, 2 dice, 3 dice, 100 dice...
 
         // TODO In some games, the order of the dice matters, so don't sort or otherwise modify the diceValues list.
-        
-        throw new RuntimeException("Finish the allSameValue method. Once you've written your code, remove this line otherwise your code will always crash.");   // TODO remove and replace with your code
+
+        return true;
     }
     
 }

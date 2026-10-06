@@ -99,7 +99,16 @@ public class Question_3_Movie_Watch_List {
 
          */
 
-        throw new RuntimeException("Finish this method and then remove this line. Once you've written your code, remove this line otherwise your code will always crash.");  // TODO remove and replace with your code
+        for (String existingMovie : movies) {
+
+            if (existingMovie.equalsIgnoreCase(movie)) {
+                System.out.println("This movie is already in your watchlist!");
+                return;
+            }
+        }
+
+        movies.add(movie);
+        System.out.println("Movie added!");
 
     }
 
@@ -120,8 +129,11 @@ public class Question_3_Movie_Watch_List {
 
          */
 
+        if (movies == null || movies.isEmpty()) {
+            return null;
+        }
 
-        throw new RuntimeException("Finish this method and then remove this line. Once you've written your code, remove this line otherwise your code will always crash.");  // TODO remove and replace with your code
+        return movies.get(0);
     }
 
 
@@ -154,7 +166,21 @@ public class Question_3_Movie_Watch_List {
          */
 
 
-        throw new RuntimeException("Finish this method and then remove this line. Once you've written your code, remove this line otherwise your code will always crash.");  // TODO remove and replace with your code
+        if (movies == null || movies.isEmpty()) {
+            System.out.println("Movie not found!");
+            return;
+        }
+
+        for (String existingMovie : movies) {
+
+            if (existingMovie.equalsIgnoreCase(movie)) {
+                movies.remove(existingMovie);
+                System.out.println("Movie removed!");
+                return;
+            }
+        }
+
+        System.out.println("Movie not found!");
 
     }
 
@@ -175,7 +201,13 @@ public class Question_3_Movie_Watch_List {
 
          */
 
-        throw new RuntimeException("Finish this method and then remove this line. Once you've written your code, remove this line otherwise your code will always crash.");  // TODO remove and replace with your code
+        if (movies == null || movies.isEmpty()) {
+            return null;
+        }
+
+        int randomIndex = (int) (Math.random() * movies.size());
+
+        return movies.get(randomIndex);
     }
 
 
@@ -216,7 +248,19 @@ public class Question_3_Movie_Watch_List {
          */
 
 
-        throw new RuntimeException("Finish this method and then remove this line. Once you've written your code, remove this line otherwise your code will always crash.");  // TODO remove and replace with your code
+        if (movies == null || movies.isEmpty()) {
+            System.out.println("No movies");
+            return;
+        }
+
+        // Make a copy so the original list is not changed
+        List<String> sortedMovies = new ArrayList<>(movies);
+
+        sortedMovies.sort(null);
+
+        for (String movie : sortedMovies) {
+            System.out.println(movie);
+        }
     }
 
 
@@ -242,7 +286,14 @@ public class Question_3_Movie_Watch_List {
         This method does not return anything.
           */
 
-        throw new RuntimeException("Finish this method and then remove this line. Once you've written your code, remove this line otherwise your code will always crash.");  // TODO remove and replace with your code
+        if (movies == null || movies.isEmpty()) {
+            System.out.println("No movies");
+            return;
+        }
+
+        for (int i = 0; i < movies.size(); i++) {
+            System.out.println((i + 1) + ". " + movies.get(i));
+        }
 
     }
 
